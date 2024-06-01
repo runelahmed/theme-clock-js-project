@@ -5,14 +5,12 @@
 --secondary-color:#fff;
 
 }
-html{
-    transition: all 0.5s ease-in ;
-}
-html.dark{
+
+.dark{
     --primary-color: #fff;
     --secondary-color: #333;
 }
-html.dark{
+.dark{
     background-color: #111;
     color: var(--primary-color);
 
@@ -30,17 +28,45 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  transition: all 0.5s ease-in ;
 }
 
-.toggle{
+/* .toggle{
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 4px;
     padding: 8px 12px;
     position: absolute;
-    top: 100px;
+    top: 50px;
+
+} */
+
+.toggle{
+    background-color:#aaa;
+    color: var(--secondary-color);
+    border-radius: 15px;
+    width: 45px;
+    padding: 2px 3px;
+    position: absolute;
+    top: 50px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s, background 0.5s;
+}
+
+.toggle span{
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.toggle.dark-btn-on{
+    padding-left: 24px;
 
 }
+
 
 .toggle:focus{
     outline: none;
@@ -56,9 +82,12 @@ body {
 
 .clock{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
+
+
+
 
 .needle{
     background-color: var(--primary-color);
